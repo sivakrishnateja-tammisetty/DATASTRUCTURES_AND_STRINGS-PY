@@ -7,6 +7,7 @@
 *Data can be accessing using key.
 
 * WAYS TO CREAT DICT:
+ -------------------
 
   * 1st way ==>  d=dict()
   *2nd way ==>  d={}
@@ -27,10 +28,11 @@ print(d['key2']) o/p: 2
 
 
 
-DICTIONARIES FUNCTIONS:
-----------------------
+* DICTIONARIES FUNCTIONS:
+   ---------------------
 
-* Adding elements to dict:
+* ADDING ELEMENTS TO DICT:
+  -----------------------
  * syntax ==> d[key]=value
 
  Eg:
@@ -41,16 +43,73 @@ DICTIONARIES FUNCTIONS:
 
 
 
-* Delete an element from dict:
+* DELETE AN ELEMENT FROM DICT :
+  ----------------------------
 
- * to delete an element in dict, you can use del().
- *syntax ===> del(d[key])
+  * to delete an element in dict, you can use del().
+  *syntax ===> del(d[key])
+
+
+ Eg:
+ d={'a':'apple','b':'ball','c':'cat'}
+ del(d['c']) ==> to delete particuar key element
+ print(d)  #o/p: {'a': 'apple', 'b': 'ball'}
+ del(d) ==> to delete entire dict
+ print(d) o/p: Name Error d was not found
+
+
+
+* CHECKING WHETHER KEY IS PRESENT IN DICT OR NOT:
+  ----------------------------------------------
+ *syntax ==> key in dictionary
+ * It will return True/False
+
+ Eg:
+ d={'a':'apple','b':'ball','c':'cat'}
+ print( 'a' in d)  o/p: True
+ print(' g' in d) o/p: False
+
+
+* TO GET ALL KEYS  AND ALL VALUES FROM DICT:
+  -----------------------------------------
+*syntax ==> d.keys()
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+print(d.keys())
+
+o/p: dict_keys(['a', 'b', 'c'])
+
+
+*syntax ==> d.values()
 
 
 Eg:
 d={'a':'apple','b':'ball','c':'cat'}
-del(d['c']) ==> to delete particuar key element
-print(d)  #o/p: {'a': 'apple', 'b': 'ball'}
-del(d) ==> to delete entire dict
-print(d) o/p: Name Error d was not found
+print(d.values())
+
+o/p: dict_values(['apple', 'ball', 'cat'])
+
+
+
+
+*ACCESSING DICT DATA IN 2 WAYS:
+ -----------------------------
+
+ *1st way ==> using key
+ *2nd way ==> using get()
+
+ *syntax ==> d[key]
+ *syntax ==> d.get(key)  (or) d.get(key,"msg")
+
+*NOTE: accessing using key,if key was not found ,then its show key error. To avoid that KeyError ,we use get() method,it will not through error its show None or we want to display our own msg.
+
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+print(d['d'])   o/p: KeyError
+print(d.get('d')) o/p: None
+print(d.get('d',"Not Found"))
+
+
 
