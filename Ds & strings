@@ -555,7 +555,56 @@ o/p:
 [10,30,50]
 
 l=[10,20,30,40,50,60,70]
+
+
+
 print(l[0:5:3])
 
 o/p:
 [10,40]
+
+
+
+
+LIST COMPREHENSION:
+-----------------
+  *List comprehension will convert multiple lines of code into single line.
+
+
+
+  Eg:
+  l=[]
+for i in range(5):
+    z=i*i
+    l.append(z)
+print(l)
+
+o/p:
+[0,1,4,9,16]
+
+*syntax:
+
+        [expression for item in list test_expression]
+
+
+
+Eg:
+l=[i**2 for i in range(5)]
+print(l)
+ o/p:
+[0,1,4,9,16]
+
+
+
+
+l=[i**2 for i in range(5) if i%2==0]
+print(l)
+
+o/p:
+[0,4,16]
+
+
+
+
+
+
