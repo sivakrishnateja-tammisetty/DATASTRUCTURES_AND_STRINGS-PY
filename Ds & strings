@@ -1,5 +1,5 @@
-                                                                                             1. DICTIONARY
-                                                                                               -------------
+                                                                     1. DICTIONARY
+                                                                       -------------
 
 *Dict has key value pair form of data.
 * Dict's are orderd (python 3.7 & above version).
@@ -723,7 +723,260 @@ o/p:False
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                       4.STRING FUNCTIONS
+
+* capitalize() :This method is used to capitalize, first word first alphabet of whole string.
+*upper()  :It converts all characters to upper case.
+*lower()  :It converts all characters into lower case.
+*isnumeric() : It checks wheter given string is numeric or not.
+*isalpha()  : It checks whether given string is alphabet or not.
+*startswith("str") : It checks whether given string is startswith given substring or not.
+*endswith("str") : It checks whether given string is endswith given substring or not.
+*replace("OLD","NEW") :It will replace old str with new str.
+*find("str") :It returns lowest index in string where substring is found.
+*lstrip() :It will remove all leading spaces from the string.
+*rstrip() :It will remove all trailing spaces from the string.
+*split() :It will split the string into list of words.
+*splitlines() :It will split the string into list of string.
+*title() :It will convert every word first letter should be capital.
 
 
 
 
+Eg:
+    name="KrIshna teja"
+    print(name.capitalize())
+    o/p:
+        Krishna teja
+
+Eg:
+    name="KrIshna"
+    print(name.capitalize())
+
+   o/p: KRISHNA TEJA
+
+
+Eg:
+  name="KRIshna TEja"
+  print(name.lower())
+  o/p:krishna teja
+
+
+Eg:
+  num='9'
+  print(num.isnumeric())   o/p:True
+
+
+num=9
+print(num.isnumeric())  o/p: Attribute Error: 'int' object has no attribute 'isnumeric'
+
+
+
+Eg:
+  num='9'
+  print(num.isalpha())  o/p:False
+
+  num='S'
+  print(num.isalpha())  o/p:True
+
+Eg:
+  name="siva is a good boy"
+  print(name.startswith("si"))
+ o/p:True
+
+name="siva is a good boy"
+print(name.startswith("siva"))
+ o/p:True
+
+name="siva is a good boy"
+print(name.startswith("iva"))
+o/p:False
+
+
+
+Eg:
+name="siva is a good boy"
+print(name.endswith("iva"))
+
+o/p: False
+
+name="siva is a good boy"
+print(name.endswith("boy"))
+o/p:True
+
+name="siva is a good boy"
+print(name.endswith("y"))
+o/p:True
+
+
+
+
+Eg:
+name="siva is a good boy"
+print(name.replace("siva","Teja"))
+
+o/p:Teja is a good boy
+
+
+
+Eg:
+name="siva is a good boy"
+print(name.find("a"))
+o/p:3
+
+name="siva is a good boy"
+print(name.find("o"))
+o/p: 11
+
+
+Eg:
+name=" siva is a good boy"
+print(name)
+print(name.lstrip())
+
+o/p:
+  siva is a good boy
+siva is a good boy
+
+
+Eg:
+name="siva is a good boy.   "
+print(name.rstrip())
+o/p:
+siva is a good boy
+
+
+Eg:
+name="siva is a good boy."
+print(name.rstrip())
+o/p:
+['siva', 'is', 'a', 'good', 'boy']
+
+
+
+Eg:
+name="siva is a good boy."
+print(name.splitlines())
+o/p:
+['siva is a good boy.']
+
+
+
+
+Eg:
+name="siva","krishna"
+print(name)           o/p:('siva','krishna')
+b=','
+print(b.join(a))      o/p:siva,krishna
+
+
+
+
+
+
+
+
+*STRING FORMATTING:
+ -----------------
+
+*Ways:
+ ----
+  * 1st way ==> format() method
+
+Eg1:
+name="Sivakrishnateja "
+age=25
+print("My name is {} and my age is {} years old.".format(name,age))
+print("My name is {} and my age is {} years old.".format(age,name))
+
+
+o/p:
+My name is Sivakrishnateja and my age is 25 years old.
+My name is 25 and my age is Sivakrishnateja years old.
+
+Eg2:
+a="apple"
+b="ball"
+c="cat"
+print("{0} {2} {1}".format(a,b,c))
+print("{0} {1} {2}".format(a,b,c))
+
+o/p:
+apple cat ball
+apple ball cat
+
+
+
+
+Eg3:
+price=150
+with_tax=150+20
+print(with_tax)
+print("Price: Rs{:.2f} and tax: Rs{:.2f}".format(price,with_tax))
+
+o/p:
+Price: Rs150.00 and tax: Rs170.00
+
+
+
+2nd way:
+--------
+
+*Its Available in python 3.6 and above
+
+
+Eg:
+name="siva"
+age=24
+print(f"My name is {name} and my age is {age}.")
+
+o/p:
+My name is siva and my age is 24.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+                                        5.TUPLE
+
+*Like list, tuples are also ordered collection of data.
+*Unchangable(Immutable)
+*Iterable
+*can be heterogenous.
+NOTE: Like list, in tuple once created tuple, we can't change it throughout the lifecycle.
+
+
+*creating of tuple:
+ -----------------
+  *we can create tuple using ().
+
+
+ Eg:
+  nums=(1,2,3,4,5)
+  print(nums)          o/p: (1,2,3,4,5)
+
+
+*Accessing elements in tuple:
+ ---------------------------
+nums=(1,2,3,4,5)
+print(nums[2])   o/p:3
+
+
+
+*Concatenation of tuples:
+ -----------------------
+
+Eg:
+t1=("My","age is ",23)
+t2=("years ","old.")
+print(t1+t2)
+
+o/p:('My' 'age is' 23, 'years ','old.')
+
+
+*Length of a tuple:
+  -----------------
+Eg:
+t1=("My","age is ",23)
+print(len(t1))
+o/p:3
