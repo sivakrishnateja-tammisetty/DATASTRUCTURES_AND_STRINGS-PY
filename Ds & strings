@@ -1,5 +1,5 @@
-DICTIONARY:
-----------
+1. DICTIONARY:
+-------------
 
 *Dict has key value pair form of data.
 * Dict's are orderd (python 3.7 & above version).
@@ -24,3 +24,33 @@ print(d)   o/p:{}
 d={'key1':1,'key2':2,'key3':3}
 print(d) o/p: {'key1':1,'key2':2,'key3':3}
 print(d['key2']) o/p: 2
+
+
+
+DICTIONARIES FUNCTIONS:
+----------------------
+
+* Adding elements to dict:
+ * syntax ==> d[key]=value
+
+ Eg:
+ d={'a':'apple','b':'ball','c':'cat'}
+ print(d) o/p: {'a': 'apple', 'b': 'ball', 'c': 'cat'}
+ d['d']='dog'
+ print(d) o/p: {'a': 'apple', 'b': 'ball', 'c': 'cat', 'd': 'dog'}
+
+
+
+* Delete an element from dict:
+
+ * to delete an element in dict, you can use del().
+ *syntax ===> del(d[key])
+
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+del(d['c']) ==> to delete particuar key element
+print(d)  #o/p: {'a': 'apple', 'b': 'ball'}
+del(d) ==> to delete entire dict
+print(d) o/p: Name Error d was not found
+
