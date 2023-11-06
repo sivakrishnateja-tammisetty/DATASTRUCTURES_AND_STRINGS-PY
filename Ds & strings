@@ -1,5 +1,5 @@
-1. DICTIONARY:
--------------
+                                                                                             1. DICTIONARY
+                                                                                               -------------
 
 *Dict has key value pair form of data.
 * Dict's are orderd (python 3.7 & above version).
@@ -292,9 +292,11 @@ print(d.get('d')) o/p: None
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-2. LIST:
-   ----
-*Oedered collection of data.
+                                                                                         2. LIST
+                                                                                            ----
+
+
+*Ordered collection of data.
 *Lists are mutuable type of data structure.
 *It can conatin multiple type of data.
 * Lists are changable(mutuable).
@@ -513,3 +515,47 @@ o/p:
 
 
 
+
+
+
+LIST SLICING:
+-------------
+ *obtaining a subpart of lsit.
+ *syntax ==> variable[start:end] or [start:end:interval/difference]
+ * If we didnt mention start index, by default it will take from 0 index.
+ *If we didn't mention end index,by default it take end+1 index.
+
+Eg:
+l=[10,20,30,40,50,60,70]
+print(l[0:5])
+
+o/p:
+[10,20,30,40,50]
+
+print(l[:5])
+
+o/p:
+[10,20,30,40,50]
+
+ l=[10,20,30,40,50,60,70]
+print(l[4:7])
+print(l[4:])
+
+o/p:
+[50,60,70]
+[50,60,70]
+
+
+Eg:
+
+l=[10,20,30,40,50,60,70]
+print(l[0:5:2])
+
+o/p:
+[10,30,50]
+
+l=[10,20,30,40,50,60,70]
+print(l[0:5:3])
+
+o/p:
+[10,40]
