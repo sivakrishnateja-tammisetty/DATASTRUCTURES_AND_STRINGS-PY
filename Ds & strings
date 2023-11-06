@@ -1,0 +1,7 @@
+DICTIONARY:
+----------
+
+*Dict has key value pair form of data.
+* Dict's are orderd (python 3.7 & above version).
+*Does not support indexing.
+*Data can be accessing using key.
