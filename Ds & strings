@@ -28,8 +28,117 @@ print(d['key2']) o/p: 2
 
 
 
-* DICTIONARIES FUNCTIONS:
-   ---------------------
+
+*for checking type():
+ --------------------
+*syntax ==> type()
+
+d={'a':'apple','b':'ball','c':'cat'}
+print(type(d),d)
+
+o/p: <class 'dict'> {'a':'apple','b':'ball','c':'cat'}
+
+
+
+*To find length:
+ --------------
+
+*syntax ==> len()
+
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+print(len(d))
+
+
+
+*Updating dictionary:
+ --------------------
+ *while updating value ,key was not there in dict,then it will add in dict.
+ *if key was already exist in dict,then it will update the value.
+
+ Eg:
+ d={'a':'apple','b':'ball','c':'cat'}
+ print(d)
+ d['b']="bat"
+ print(d)
+
+o/p:
+{'a':'apple','b':'ball','c':'cat'}
+{'a':'apple','b':'bat','c':'cat'}
+
+
+
+*Updating mutliple values:
+ --------------------------
+* we can use update method.
+*syntax  ==> d.update()
+
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+print(d)
+new={'d':"dog",'e':"eagle"}
+d.update(new)
+print(d)
+
+o/p:
+{'a':'apple','b':'ball','c':'cat'}
+{'a':'apple','b':'ball','c':'cat','d':'dog','e':'eagle'}
+
+
+
+* DELETION OPERATIONS IN DICT:
+  ---------------------------
+
+ *pop(key) ==>It will remove specified key from dict and return that corresponding value.
+ *If key was not found it will return default if given, otherwise KeyError.
+
+ Eg:
+ d={'a':'apple','b':'ball','c':'cat'}
+ print(d.pop('b'))
+ print(d.pop('g',"Not found"))
+ print(d.pop('g')) 
+
+
+o/p:
+ball
+Not found
+key Error
+
+
+
+
+*popitem()  ==> It deletes the last item of the dictionary & returns that last item.
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+print(d.popitem())
+print(d)
+
+o/p:
+('c', 'cat')
+{'a':'apple', 'b':'ball'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                   DICTIONARIES FUNCTIONS:
+                                                                                    ---------------------
+
+
 
 * ADDING ELEMENTS TO DICT:
   -----------------------
@@ -43,19 +152,7 @@ print(d['key2']) o/p: 2
 
 
 
-* DELETE AN ELEMENT FROM DICT :
-  ----------------------------
 
-  * to delete an element in dict, you can use del().
-  *syntax ===> del(d[key])
-
-
- Eg:
- d={'a':'apple','b':'ball','c':'cat'}
- del(d['c']) ==> to delete particuar key element
- print(d)  #o/p: {'a': 'apple', 'b': 'ball'}
- del(d) ==> to delete entire dict
- print(d) o/p: Name Error d was not found
 
 
 
@@ -98,6 +195,8 @@ o/p: dict_values(['apple', 'ball', 'cat'])
 
  *1st way ==> using key
  *2nd way ==> using get()
+
+ * We are using get method to avoid error (KeyError).
 
  *syntax ==> d[key]
  *syntax ==> d.get(key)  (or) d.get(key,"msg")
