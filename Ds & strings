@@ -5,3 +5,22 @@ DICTIONARY:
 * Dict's are orderd (python 3.7 & above version).
 *Does not support indexing.
 *Data can be accessing using key.
+
+* WAYS TO CREAT DICT:
+
+  * 1st way ==>  d=dict()
+  *2nd way ==>  d={}
+
+
+
+Eg:
+d={}
+print(d)  o/p: {}
+
+d=dict()
+print(d)   o/p:{}
+
+
+d={'key1':1,'key2':2,'key3':3}
+print(d) o/p: {'key1':1,'key2':2,'key3':3}
+print(d['key2']) o/p: 2
