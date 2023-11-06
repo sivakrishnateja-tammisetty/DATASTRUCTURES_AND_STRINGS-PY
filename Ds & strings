@@ -980,3 +980,38 @@ Eg:
 t1=("My","age is ",23)
 print(len(t1))
 o/p:3
+
+
+
+Eg: Immutable
+t1=(1,233,23)
+t1[1]=99
+print(t1)
+
+o/p:
+TypeError:'tuple' object does not support item assignment
+
+
+
+
+
+*sorted(tuple_variable): It will sort the tuple in ascending order by default.
+ ----------------------
+
+Eg:
+t1=(1,233,23)
+t1_sort=sorted(t1)
+print(t1_sort)
+
+o/p: [1,23,233]
+
+
+
+
+*index(value) :It will return the index of the given value.
+
+Eg:
+t1=(1,233,23,1,32,67)
+print(t1.index(23))
+
+o/p:2
