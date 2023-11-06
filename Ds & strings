@@ -88,10 +88,12 @@ o/p:
 
 
 
-* DELETION OPERATIONS IN DICT:
-  ---------------------------
+* DELETION OPERATIONS IN DICT(pop(key) , popitem() , del() ):
+  ----------------------------------------------------------
 
- *pop(key) ==>It will remove specified key from dict and return that corresponding value.
+ *pop(key):
+  --------
+ *It will remove specified key from dict and return that corresponding value.
  *If key was not found it will return default if given, otherwise KeyError.
 
  Eg:
@@ -109,7 +111,10 @@ key Error
 
 
 
-*popitem()  ==> It deletes the last item of the dictionary & returns that last item.
+*popitem()
+ ----------
+*It deletes the last item of the dictionary & returns that last item.
+
 Eg:
 d={'a':'apple','b':'ball','c':'cat'}
 print(d.popitem())
@@ -122,6 +127,79 @@ o/p:
 
 
 
+
+* DELETE AN ELEMENT FROM DICT :
+  ----------------------------
+
+  * to delete an element in dict, you can use del().
+  *syntax ===> del(d[key])
+
+
+ Eg:
+ d={'a':'apple','b':'ball','c':'cat'}
+ del(d['c']) ==> to delete particuar key element
+ print(d)  #o/p: {'a': 'apple', 'b': 'ball'}
+ del(d) ==> to delete entire dict
+ print(d) o/p: Name Error d was not found
+
+
+
+
+* ITREATION IN DICT:
+  ------------------
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+for i in d:
+    print(i)
+
+
+o/p:
+a
+b
+c
+    
+d={'a':'apple','b':'ball','c':'cat'}    
+for j in d:
+    print(j,d[j])
+
+o/p: a apple
+     b ball
+     c cat
+
+
+* printing key and value using dict.items():
+  *syntax ==> dict.items()
+
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+for key,value in d.items():
+    print(key,value)
+
+
+o/p:
+a apple
+b ball
+c cat
+
+
+
+
+
+
+
+* printing dict elements using items():
+  ------------------------------------
+
+Eg:
+d={'a':'apple','b':'ball','c':'cat'}
+print(d.items())
+
+
+
+o/p:
+[('a','apple'),('b','ball'),('c','cat')]
 
 
 
